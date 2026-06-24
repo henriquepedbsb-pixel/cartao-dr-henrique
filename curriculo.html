@@ -92,7 +92,25 @@
     </div>
   </section>
 
+  <a href="depoimentos.html" style="display:flex;align-items:center;justify-content:center;gap:10px;margin:24px 24px 0;padding:16px 20px;background:#F4795B;color:#fff;font-weight:700;font-size:16px;border-radius:16px;box-shadow:0 8px 22px rgba(193,84,58,.22);">⭐ Ver depoimentos de pacientes &rarr;</a>
+
   <div class="foot">Dr. Henrique Gomes · Pediatra e Gastropediatra · Brasília/DF</div>
 </div>
+<!-- WhatsApp flutuante -->
+<div id="wa-fab" style="position: fixed; right: 18px; bottom: 18px; z-index: 99999; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-family: 'DM Sans', sans-serif;">
+  <div id="wa-menu" style="display: none; flex-direction: column; gap: 9px; align-items: flex-end;">
+    <a href="https://wa.me/5561986180492?text=Ol%C3%A1!%20Vim%20pelo%20cart%C3%A3o%20do%20Dr.%20Henrique%20e%20gostaria%20de%20agendar%20uma%20consulta%20na%20PedCare." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; background: #fff; color: #234C36; font-weight: 700; font-size: 14px; padding: 11px 16px; border-radius: 100px; box-shadow: 0 6px 18px rgba(0,0,0,.18); text-decoration: none;"><span style="width:9px;height:9px;border-radius:50%;background:#25D366;display:inline-block;"></span>PedCare · 61 98618-0492</a>
+    <a href="https://wa.me/5561996699099?text=Ol%C3%A1!%20Vim%20pelo%20cart%C3%A3o%20do%20Dr.%20Henrique%20e%20gostaria%20de%20agendar%20uma%20consulta%20na%20PedStar." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 9px; background: #fff; color: #234C36; font-weight: 700; font-size: 14px; padding: 11px 16px; border-radius: 100px; box-shadow: 0 6px 18px rgba(0,0,0,.18); text-decoration: none;"><span style="width:9px;height:9px;border-radius:50%;background:#25D366;display:inline-block;"></span>PedStar · 61 99669-9099</a>
+  </div>
+  <button id="wa-btn" aria-label="Agendar pelo WhatsApp" style="width: 60px; height: 60px; border-radius: 50%; background: #25D366; border: none; box-shadow: 0 6px 18px rgba(37,211,102,.45); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 30px; line-height: 1;">💬</button>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('wa-btn'), m = document.getElementById('wa-menu'), open = false;
+    function set(o){ open=o; m.style.display=o?'flex':'none'; }
+    b.addEventListener('click', function(e){ e.stopPropagation(); set(!open); });
+    document.addEventListener('click', function(){ if(open) set(false); });
+  })();
+</script>
 </body>
 </html>
